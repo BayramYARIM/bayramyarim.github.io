@@ -1,0 +1,118 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #333; */
+    background-color: #101214;
+}
+
+header {
+    /* background-color: #333; */
+    background-color: #101214;
+    color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px; 
+}
+
+.header-content h1 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #44b8e7;
+}
+
+.Items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .Item {
+    /* padding: 10px 0;  */
+    width: 30%;
+    transition: box-shadow, 0.4s, ease-in-out;
+    border-radius: 3px;
+    margin: 10px;
+    border: 1px solid white;
+  }
+
+  .Item:hover {
+    border-radius: 3px;
+    transition: box-shadow, 0.4s, ease-in-out;
+    border: 1px solid #44b8e7;
+  }
+  @media (max-width: 1050px) {
+    .Item {
+      width: 48%;
+    }
+  }
+  @media (max-width: 600px) {
+    .Item {
+      width: 100%;
+    }
+  }
+  /* :not(:last-child) {
+    margin-bottom: 10px;
+  } */
+  .Item__link {
+    text-decoration: none;
+  }
+  .Item__title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    color: #44b8e7;
+    width: 90%;
+    margin: 20px auto 0;
+  }
+  .Item__lang {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #777;
+  }
+  .ImageContainer {
+    width: 100%;
+    height: auto;
+  }
+  .Image {
+    width: 100%;
+    height: auto;
+  }
+  
