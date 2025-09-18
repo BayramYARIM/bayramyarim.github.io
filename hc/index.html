@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,28 +30,270 @@
 	<meta property="og:title" content="Bayram YARIM | Github Page" />
 	<meta property="og:description" content="Bayram YARIM - Senior Software Engineer, Special software development - Web,Mobile,Desktop, Mobile Softare Development" />
 
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="assets/img/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-    <link href="assets/img/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-    <link href="assets/img/site.webmanifest" rel="manifest">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="../assets/img/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="../assets/img/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="../assets/img/site.webmanifest" rel="manifest">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../projects.css">
+	
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000000;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .sound-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 48px;
+      cursor: pointer;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 10px;
+      z-index: 20;
+    }
+    
+    .sound-icon:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .sound-on {
+      color: #00ff00;
+    }
+    
+    .sound-off {
+      color: #ff0000;
+    }
+    
+    .emoji {
+      position: absolute;
+      font-size: 24px;
+      opacity: 0;
+      animation: fadeMoveUp 6s infinite;
+      z-index: 1;
+    }
+    
+    @keyframes fadeMoveUp {
+      0% {
+        opacity: 0;
+        transform: translateY(0);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(-100px);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-200px);
+      }
+    }
+    
+    .text {
+      position: absolute;
+      text-align: center;
+      font-size: 96px;
+      color: white;
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 2px black;
+      font-weight: bold;
+      opacity: 0;
+      animation: fadeText 9s forwards;
+      z-index: 10;
+      line-height: 1.2;
+      width: 100%;
+      text-transform: uppercase;
+    }
+    
+    .text:nth-child(1) {
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 24px;
+      animation-delay: 1s;
+    }
+    
+    .text:nth-child(2) {
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 24px;
+      animation-delay: 3s;
+    }
+    
+    .text:nth-child(3) {
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation-delay: 5s;
+    }
+    
+    @keyframes fadeText {
+      0% {
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    
+    .final-emoji {
+      position: absolute;
+      font-size: 100px;
+      opacity: 0;
+      animation: finalEmoji 1s 14s forwards;
+      z-index: 10;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    @keyframes finalEmoji {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
 
+    @media (max-width: 960px) {
+      .text {
+        font-size: 64px;
+      }
+    
+      .final-emoji {
+        font-size: 60px;
+      }
+    
+      .sound-icon {
+        font-size: 36px;
+        padding: 8px;
+      }
+    
+      .emoji {
+        font-size: 16px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .text {
+        font-size: 48px;
+      }
+    
+      .final-emoji {
+        font-size: 60px;
+      }
+    
+      .sound-icon {
+        font-size: 36px;
+        padding: 8px;
+      }
+    
+      .emoji {
+        font-size: 16px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .text {
+        font-size: 36px;
+      }
+    
+      .final-emoji {
+        font-size: 50px;
+      }
+    
+      .sound-icon {
+        font-size: 28px;
+        padding: 6px;
+      }
+    
+      .emoji {
+        font-size: 12px;
+      }
+    }  
+  </style>
 </head>
 <body>
-    <div class="grid-3">
-        <div class="section-1">
-            <h2>Hayırlı Cumalar</h2>
-        </div>
-		<div class="section-1">
-            <h2>Bayram YARIM</h2>
-            <p>Hi there, My name is Bayram.</br>I am Senior Software Engineer.</p><br>
-            <!-- <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a> -->
-            <a href="https://www.linkedin.com/in/bayramyarim/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/BayramYARIM" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:byyarim@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-    </div>
+
+  <div class="text">SİZ SİZ OLUN ZATEN</div>
+  <div class="text">BİZ OLAMAZSINIZ</div>
+  <div class="text">HAYIRLI CUMALAR</div>
+
+  <div class="final-emoji">😉</div>
+
+  <div class="sound-icon sound-on" onclick="toggleSound()">🔇</div>
+  <footer style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); color: white; font-size: 18px; text-align: center;">
+    <p>Made with 🧡 by Bayram YARIM | 
+        <a href="https://github.com/BayramYARIM" target="_blank" style="text-decoration: none; color: white;">GitHub</a>
+    </p>
+  </footer>
+  <script>
+    let isPlaying = false;
+    const soundIcon = document.querySelector('.sound-icon');
+    const audio = new Audio('geylani.mp3');
+    audio.loop = true;
+
+    function toggleSound() {
+      if (isPlaying) {
+        audio.pause();
+        soundIcon.textContent = "🔇";
+        soundIcon.classList.remove('sound-on');
+        soundIcon.classList.add('sound-off');
+      } else {
+        audio.play();
+        soundIcon.textContent = "🔊";
+        soundIcon.classList.remove('sound-off');
+        soundIcon.classList.add('sound-on');
+      }
+      isPlaying = !isPlaying;
+    }
+
+    const emojiCount = 200;
+    const container = document.body;
+
+    for (let i = 0; i < emojiCount; i++) {
+      const emoji = document.createElement('div');
+      emoji.classList.add('emoji');
+      emoji.textContent = '🌹';
+
+      emoji.style.top = Math.random() * 100 + '%';
+      emoji.style.left = Math.random() * 100 + '%';
+      emoji.style.fontSize = (Math.random() * 20 + 10) + 'px';
+      emoji.style.animationDuration = Math.random() * 4 + 3 + 's';
+      emoji.style.animationDelay = Math.random() * 5 + 's';
+
+      container.appendChild(emoji);
+    }
+
+    setInterval(() => {
+      const emojis = document.querySelectorAll('.emoji');
+      emojis.forEach(emoji => {
+        emoji.style.animation = 'none';
+        emoji.offsetHeight;
+        emoji.style.animation = `fadeMoveUp ${Math.random() * 4 + 3}s infinite`;
+      });
+    }, 5000);
+  </script>
+
 </body>
 </html>
